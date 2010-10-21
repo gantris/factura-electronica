@@ -1,4 +1,5 @@
 #summary Guía del Usuario
+#labels Featured
 
 = Pre-requisitos =
  
