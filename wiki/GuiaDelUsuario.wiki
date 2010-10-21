@@ -1,7 +1,7 @@
 #summary Guía del Usuario
 #labels Featured
 
-= Pre-requisitos =
+== Pre-requisitos ==
  
 Para trabajar con los componentes de factura electrónica debes tener instalados los siguientes sistemas:
 
@@ -14,14 +14,14 @@ Para compilar los componentes, utiliza el comando:
 
 este comando preparará todas las dependencias y generará el código necesario para trabajar con el XSD de la versión 3.0  del CFD
 
-= Herramientas =
+== Herramientas ==
 
 Asegurate de incluir las clases compiladas en el CLASSPATH, esto lo puedes hacer ejecutando el siguiente comando:
 
   * en `*`nix: `export CLASSPATH=target/classes/`
   * en windows: `set CLASSPATH=target\classes\`
 
-== Validar el XML del CFD ==
+=== Validar el XML del CFD ===
 
 Para validar el XML de ejemplo utiliza el siguiente comando:
 
