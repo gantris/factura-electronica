@@ -21,7 +21,7 @@ Asegurate de incluir las clases compiladas en el CLASSPATH, esto lo puedes hacer
   * en `*`nix: `export CLASSPATH=target/classes/`
   * en windows: `set CLASSPATH=target\classes\`
 
-=== Validar el XML del CFD ===
+=== Validar el XML de un CFD ===
 
 Para validar el XML de ejemplo utiliza el siguiente comando:
 
