@@ -1,6 +1,6 @@
 #summary Guía del Usuario
 
-= Pre-requisitos =
+= Prerequisitos =
 
 Para trabajar con los componentes de factura electrónica debes tener instalados los siguientes sistemas:
 
