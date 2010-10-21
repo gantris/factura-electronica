@@ -1,7 +1,7 @@
 #summary Guía del Usuario
 
-= Prerequisitos =
-
+= Pre-requisitos =
+ 
 Para trabajar con los componentes de factura electrónica debes tener instalados los siguientes sistemas:
 
   * [http://www.java.com/en/download/manual.jsp Java 6]
