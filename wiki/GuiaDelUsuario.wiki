@@ -23,8 +23,8 @@ Asegurate de incluir las clases compiladas en el CLASSPATH, esto lo puedes hacer
 
 === Validar el XML de un CFD ===
 
-Para validar el XML de ejemplo utiliza el siguiente comando:
+Para validar el XML de ejemplo contra el esquema, utiliza el siguiente comando:
 
-{{{ java mx.bigdata.cfdi.tools.ValidateCFDv3 resources/xsd/cfdv3.xsd resources/xml/cfdv3.xml }}}
+{{{ java mx.bigdata.cfdi.tools.CFDv3Validator resources/xml/cfdv3.xml resources/xsd/cfdv3.xsd }}}
 
 Reemplaza el segundo argumento para validar otros XMLs
