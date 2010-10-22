@@ -27,4 +27,12 @@ Para validar el XML de ejemplo contra el esquema, utiliza el siguiente comando:
 
 {{{ java mx.bigdata.cfdi.tools.CFDv3Validator resources/xml/cfdv3.xml resources/xsd/cfdv3.xsd }}}
 
-Reemplaza el segundo argumento para validar otros XMLs
+Reemplaza el primer argumento para validar otros XMLs
+
+=== Verificar el sello de un CFD ===
+
+Para verificar el sello del XML de ejemplo, utiliza el siguiente comando:
+
+{{{ java mx.bigdata.cfdi.tools.CFDv3Verifier resources/xml/cfdv3.xml resources/xslt/cadenaoriginal_3_0.xslt }}}
+
+Reemplaza el primer argumento para verificar otros CFDs
