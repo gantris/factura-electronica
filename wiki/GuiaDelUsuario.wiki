@@ -1,6 +1,8 @@
 #summary Guía del Usuario
 #labels Featured
 
+`***`los componentes están en desarrollo y su interfaz puede cambiar antes de alcanzar la versión 1.0`***`
+
 == Pre-requisitos ==
  
 Para trabajar con los componentes de factura electrónica debes tener instalados los siguientes sistemas:
