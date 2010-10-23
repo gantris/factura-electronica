@@ -1,0 +1,5 @@
+#summary Preguntas Frecuentes
+#labels Featured
+
+  # Puedo utilizar los componentes en aplicaciones comerciales?
+Si, siempre y cuando se atribuya adecuadamente según los términos de la [http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0], para más información consulta las [http://www.apache.org/foundation/licence-FAQ.html preguntas frecuentes] 
