@@ -1,7 +1,7 @@
 #summary Guía del Usuario
 #labels Featured
 
-`***`nota: los componentes están en desarrollo y su interfaz puede cambiar antes de alcanzar la versión 1.0`***`
+`***`nota: los componentes están en desarrollo y su interfaz puede llegar a cambiar antes de alcanzar la versión 1.0`***`
 
 == Pre-requisitos ==
  
@@ -17,6 +17,21 @@ Para compilar los componentes, utiliza el comando:
 {{{mvn compile}}}
 
 este comando preparará todas las dependencias y generará el código necesario para trabajar con el XSD de la versión 3.0  del CFD
+
+== Librería de componentes ==
+
+La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD):
+
+{{{
+    CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea un CFD a partir de un InputStream, en este caso un archivo
+    cfd.validate(); // Valida el XML, que todos los elementos estén presentes
+    cfd.getOriginalString(); // Obtiene la cadena original
+    cfd.getDigest() // Obtiene el digest
+    Key key = KeyLoader.loadPKCS8PrivateKey(new FileInputStream(keyfile),  password);
+    cfd.getSignature(key); // Obtiene la firma utilizando la llave privada
+    cfd.verify(); // Verifica un certificado ya firmado
+}}}
+
 
 == Herramientas ==
 
