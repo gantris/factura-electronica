@@ -10,6 +10,8 @@ Para trabajar con los componentes de factura electrónica debes tener instalados
   * [http://www.java.com/en/download/manual.jsp Java 6]
   * [http://maven.apache.org/download.html Maven]
 
+=== Compilar los componentes  ===
+
 Para compilar los componentes, utiliza el comando:
 
 {{{mvn compile}}}
