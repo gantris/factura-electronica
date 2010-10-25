@@ -32,6 +32,28 @@ La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal 
     cfd.verify(); // Verifica un certificado ya firmado
 }}}
 
+También es posible generar crear un CFD a partir de un `Comprobante`:
+
+{{{
+    ObjectFactory of = new ObjectFactory();
+    Comprobante comp = of.createComprobante();
+    comp.setVersion("3.0");
+    Date date = new GregorianCalendar(2010, 02, 06, 20, 38, 12).getTime();
+    comp.setFecha(date);
+    comp.setSello("");
+    comp.setFormaDePago("PAGO EN UNA SOLA EXHIBICION");
+    comp.setNoCertificado("30001000000100000800");
+    comp.setCertificado("");
+    comp.setSubTotal(new BigDecimal("488.50"));
+    comp.setTotal(new BigDecimal("488.50"));
+    comp.setTipoDeComprobante("ingreso");
+    comp.setEmisor(createEmisor(of));
+    comp.setReceptor(createReceptor(of));
+    comp.setConceptos(createConceptos(of));
+    comp.setImpuestos(createImpuestos(of));
+    CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea un CFD a partir de un Comprobante
+    ...
+}}}
 
 == Herramientas ==
 
