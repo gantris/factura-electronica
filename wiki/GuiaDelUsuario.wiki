@@ -77,11 +77,11 @@ Un flujo típico para _verificar_ un CFD, se ve así:
     comp.setReceptor(createReceptor(of));
     comp.setConceptos(createConceptos(of));
     comp.setImpuestos(createImpuestos(of));
-    CFDv3 cfd = new CFDv3(comp); // Crea un CFD a partir de un Comprobante
+    CFDv3 cfd = new CFDv3(comp); 
     ...
 }}}
 
-== Herramientas ==
+== Herramientas de linea de comandos ==
 
 Asegurate de incluir las clases compiladas en el CLASSPATH, esto lo puedes hacer ejecutando el siguiente comando:
 
