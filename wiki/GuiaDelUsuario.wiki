@@ -16,11 +16,13 @@ Para compilar los componentes, utiliza el comando:
 
 {{{mvn compile}}}
 
-este comando preparará todas las dependencias y generará el código necesario para trabajar con el XSD de la versión 3.0  del CFD
+este comando preparará todas las dependencias y generará el código necesario para trabajar con el XSD de la versión 3.0  del CFD.
 
 == Librería de componentes ==
 
 La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD), la clase principal es `CFDv3` que representa y tiene la lógica correspondiente a la versión 3.0 del CFD.
+
+_Nota:  Puedes encontrar un ejemplo del uso de las librerías en la clase `mx.bigdata.cfdi.tools.CLI`._
 
 === Creación del CFDv3 ===
 
