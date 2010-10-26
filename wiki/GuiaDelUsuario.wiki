@@ -67,8 +67,7 @@ Un flujo típico para _verificar_ un CFD, se ve así:
     ObjectFactory of = new ObjectFactory();
     Comprobante comp = of.createComprobante();
     comp.setVersion("3.0");
-    Date date = new GregorianCalendar(2010, 02, 06, 20, 38, 12).getTime();
-    comp.setFecha(date);
+    comp.setFecha(new Date());
     comp.setFormaDePago("PAGO EN UNA SOLA EXHIBICION");
     comp.setNoCertificado("30001000000100000800");
     comp.setSubTotal(new BigDecimal("488.50"));
