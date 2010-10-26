@@ -41,14 +41,6 @@ CFDv3 cfd = new CFDv3(new Comprobante());
 
 El CFDv3, tiene dos métodos principales firmar `sign(Key key, Certificate cert)` y verificar `verify()`; además de estos métodos tiene algunos métodos intermedios que permiten depurar la información.
 
-Un flujo típico para _verificar_ un CFD, se ve así:
-
-{{{
-    CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea el CFD a partir de un archivo
-    cfd.validate(); // Valida el XML, que todos los elementos estén presentes
-    cfd.verify(); // Verifica un comprobante ya firmado
-}}}
-
 Un flujo típico para _firmar_ un CFD se ve así:
 
 {{{
@@ -60,6 +52,15 @@ Un flujo típico para _firmar_ un CFD se ve así:
     cfd.marshal(new FileOutputStream(outFile)); // Serializa el comprobante ya firmado
 }}}
 
+Un flujo típico para _verificar_ un CFD, se ve así:
+
+{{{
+    CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea el CFD a partir de un archivo
+    cfd.validate(); // Valida el XML, que todos los elementos estén presentes
+    cfd.verify(); // Verifica un comprobante ya firmado
+}}}
+
+
 === Creación programática de un Comprobante ===
 
 {{{
@@ -68,10 +69,8 @@ Un flujo típico para _firmar_ un CFD se ve así:
     comp.setVersion("3.0");
     Date date = new GregorianCalendar(2010, 02, 06, 20, 38, 12).getTime();
     comp.setFecha(date);
-    comp.setSello("");
     comp.setFormaDePago("PAGO EN UNA SOLA EXHIBICION");
     comp.setNoCertificado("30001000000100000800");
-    comp.setCertificado("");
     comp.setSubTotal(new BigDecimal("488.50"));
     comp.setTotal(new BigDecimal("488.50"));
     comp.setTipoDeComprobante("ingreso");
@@ -79,7 +78,7 @@ Un flujo típico para _firmar_ un CFD se ve así:
     comp.setReceptor(createReceptor(of));
     comp.setConceptos(createConceptos(of));
     comp.setImpuestos(createImpuestos(of));
-    CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea un CFD a partir de un Comprobante
+    CFDv3 cfd = new CFDv3(comp); // Crea un CFD a partir de un Comprobante
     ...
 }}}
 
