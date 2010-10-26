@@ -3,7 +3,7 @@
 
 `***`nota: los componentes están en desarrollo y su interfaz puede llegar a cambiar antes de alcanzar la versión 1.0`***`
 
-<wiki:toc max_depth="1" />
+<wiki:toc max_depth="1"></wiki:toc>
 
 == Pre-requisitos ==
  
