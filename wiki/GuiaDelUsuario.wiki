@@ -3,8 +3,6 @@
 
 `***`nota: los componentes están en desarrollo y su interfaz puede llegar a cambiar antes de alcanzar la versión 1.0`***`
 
-<wiki:toc/>
-
 == Pre-requisitos ==
  
 Para trabajar con los componentes de factura electrónica debes tener instalados los siguientes sistemas:
