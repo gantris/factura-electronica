@@ -32,20 +32,30 @@ CFDv3 cfd = new CFDv3(new FileInputStream(file));
 }}}
   * O a partir de un `Comprobante`, que es el modelo que representa al XSD en la aplicación: 
 {{{
-CFDv3 cfd = new CFDv3(createComprobante());
+CFDv3 cfd = new CFDv3(new Comprobante());
 }}}
 
 === Principales operaciones === 
 
+El CFDv3, tiene dos métodos principales firmar `sign(Key key, Certificate cert)` y verificar `verify()`; además de estos métodos tiene algunos métodos intermedios que permiten depurar la información.
+
+Un flujo típico para _verificar_ un CFD, se ve así:
+
 {{{
+    CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea el CFD a partir de un archivo
     cfd.validate(); // Valida el XML, que todos los elementos estén presentes
-    cfd.getOriginalString(); // Obtiene la cadena original
-    cfd.getDigest() // Obtiene el digest
-    Key key = KeyLoader.loadPKCS8PrivateKey(new FileInputStream(keyfile),  password);
-    cfd.getSignature(key); // Obtiene la firma utilizando la llave privada   
-    Certificate cert = KeyLoader.loadX509Certificate(new FileInputStream(certFile));
-    cfd.sign(key, cert); // Firma el certificado
-    cfd.verify(); // Verifica un certificado ya firmado
+    cfd.verify(); // Verifica un comprobante ya firmado
+}}}
+
+Un flujo típico para _firmar_ un CFD se ve así:
+
+{{{
+    CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea el CFD a partir de un archivo
+    cfd.validate(); // Valida el XML, que todos los elementos estén presentes
+    Key key = KeyLoader.loadPKCS8PrivateKey(new FileInputStream(keyfile),  password); // Carga la llave privada
+    Certificate cert = KeyLoader.loadX509Certificate(new FileInputStream(certFile)); // Carga el certificado
+    cfd.sign(key, cert); // Firma el comprobante
+    cfd.marshal(new FileOutputStream(outFile)); // Serializa el comprobante ya firmado
 }}}
 
 También es posible generar crear un CFD a partir de un `Comprobante`:
