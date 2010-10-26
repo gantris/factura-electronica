@@ -101,7 +101,7 @@ export CLASSPATH=target/classes/:target/dependency/not-yet-commons-ssl-0.3.11.ja
 
 {{{
 rem en windows: 
-set CLASSPATH=target\classes\:target\dependency\not-yet-commons-ssl-0.3.11.jar:target\dependency\guava-r06.jar:target\dependency\commons-codec-1.4.jar
+set CLASSPATH=target\classes\;target\dependency\not-yet-commons-ssl-0.3.11.jar;target\dependency\guava-r06.jar;target\dependency\commons-codec-1.4.jar
 }}}
 
   * Para validar el XML de ejemplo contra el esquema, utiliza el siguiente comando:
