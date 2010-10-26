@@ -100,7 +100,7 @@ export CLASSPATH=target/classes/:target/dependency/not-yet-commons-ssl-0.3.11.ja
 }}}
 
 {{{
-REM en windows: 
+::: en windows: 
 set CLASSPATH=target\classes\:target\dependency\not-yet-commons-ssl-0.3.11.jar:target\dependency\guava-r06.jar:target\dependency\commons-codec-1.4.jar
 }}}
 
