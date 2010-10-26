@@ -38,6 +38,7 @@ Se puede crear un `CFDv3` de dos formas,
     Comprobante comp = of.createComprobante();
     comp.setVersion("3.0");
     comp.setFecha(new Date());
+    ...
     CFDv3 cfd = new CFDv3(comp);
 }}}
 
