@@ -1,10 +1,10 @@
 #summary Preguntas Frecuentes
 #labels Featured
 
-1.  ¿Puedo utilizar los componentes en aplicaciones comerciales?
+*1.  ¿Puedo utilizar los componentes en aplicaciones comerciales?*
 
 Si, siempre y cuando se atribuya adecuadamente según los términos de la [http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0]. Para más información consulta la página de  [http://www.apache.org/foundation/licence-FAQ.html preguntas frecuentes] de la Licencia.
 
-2.  ¿Cuáles son las dependencias externas de los componentes?
+*2.  ¿Cuáles son las dependencias externas de los componentes?*
 
 Actualmente los componentes dependen de las siguientes librerías: [http://code.google.com/p/guava-libraries/ guava-libraries], [http://commons.apache.org/codec/ Commons Codec] y [http://juliusdavies.ca/commons-ssl/ not-yet-commons-ssl], todas ellas disponibles bajo la Licencia Apache, Version 2.0.
