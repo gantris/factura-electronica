@@ -3,6 +3,8 @@
 
 `***`nota: los componentes están en desarrollo y su interfaz puede llegar a cambiar antes de alcanzar la versión 1.0`***`
 
+<wiki:toc max_depth="1" />
+
 == Pre-requisitos ==
  
 Para trabajar con los componentes de factura electrónica debes tener instalados los siguientes sistemas:
@@ -58,7 +60,7 @@ Un flujo típico para _firmar_ un CFD se ve así:
     cfd.marshal(new FileOutputStream(outFile)); // Serializa el comprobante ya firmado
 }}}
 
-También es posible generar crear un CFD a partir de un `Comprobante`:
+=== Creación programática de un Comprobante ===
 
 {{{
     ObjectFactory of = new ObjectFactory();
