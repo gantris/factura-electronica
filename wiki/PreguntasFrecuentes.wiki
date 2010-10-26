@@ -7,7 +7,7 @@ Si, siempre y cuando se atribuya adecuadamente según los términos de la [http:
 
 2. * ¿Cuáles son las dependencias de los componentes?*
 
-Actualmente los componentes dependen de las siguientes librerías: [http://code.google.com/p/guava-libraries/ guava-libraries], [http://commons.apache.org/codec/ Commons Codec] y [http://juliusdavies.ca/commons-ssl/ not-yet-commons-ssl], todas ellas disponibles bajo la Licencia Apache, Version 2.0.
+Actualmente los componentes dependen de las siguientes librerías: [http://code.google.com/p/guava-libraries/ guava-libraries], [http://commons.apache.org/codec/ Commons Codec] y [http://juliusdavies.ca/commons-ssl/ not-yet-commons-ssl], todas ellas disponibles bajo la Licencia Apache, Version 2.0. Adicionalmente utiliza la librería [http://www.bouncycastle.org/java.html Bouncy Castle] para depurar la aplicación.
 
 3.  *¿Cuál es el objetivo de escribir esta librería?*
 
