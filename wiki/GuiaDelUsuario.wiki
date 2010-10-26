@@ -88,12 +88,27 @@ Para crear un componente de forma procedural es importante utilizar los métodos
     ...
 }}}
 
-== Herramientas de linea de comandos ==
+== Herramientas de línea de comandos ==
 
-Asegurate de incluir las clases compiladas en el CLASSPATH, esto lo puedes hacer ejecutando el siguiente comando:
+Para poder ejecutar los programas desde la línea de comandos ejecuta la siguiente instrucción:
 
-  * en `*`nix: `export CLASSPATH=target/classes/`
-  * en windows: `set CLASSPATH=target\classes\`
+{{{mvn dependency:copy-dependencies}}}
+
+Asegurate de incluir las clases compiladas y las dependencias en el CLASSPATH, esto lo puedes hacer ejecutando el siguiente comando:
+
+target/dependency/not-yet-commons-ssl-0.3.11.jar:target/dependency/guava-r06.jar:target/dependency/commons-codec-1.4.jar:target/dependency/junit-4.8.1.jar
+
+
+  * en `*`nix: 
+
+{{{
+export CLASSPATH=target/classes/:target/dependency/not-yet-commons-ssl-0.3.11.jar:target/dependency/guava-r06.jar:target/dependency/commons-codec-1.4.jar
+}}}
+
+  * en windows: 
+{{{
+set CLASSPATH=target\classes\:target\dependency\not-yet-commons-ssl-0.3.11.jar:target\dependency\guava-r06.jar:target\dependency\commons-codec-1.4.jar
+}}}
 
   * Para validar el XML de ejemplo contra el esquema, utiliza el siguiente comando:
 
