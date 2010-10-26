@@ -20,15 +20,31 @@ este comando preparará todas las dependencias y generará el código necesario 
 
 == Librería de componentes ==
 
-La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD):
+La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD), la clase principal es `CFDv3` que representa y tiene la lógica correspondiente a la versión 3.0 del CFD.
+
+=== Creación del CFDv3 ===
+
+Se puede crear un `CFDv3` de dos formas,
+
+  * A partir de un `InputStream`, que puede ser un archivo previamente  generado o el contenido de un request HTTP, etc.:
+{{{
+CFDv3 cfd = new CFDv3(new FileInputStream(file));
+}}}
+  * O a partir de un `Comprobante`, que es el modelo que representa al XSD en la aplicación: 
+{{{
+CFDv3 cfd = new CFDv3(createComprobante());
+}}}
+
+=== Principales operaciones === 
 
 {{{
-    CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea un CFD a partir de un InputStream, en este caso un archivo
     cfd.validate(); // Valida el XML, que todos los elementos estén presentes
     cfd.getOriginalString(); // Obtiene la cadena original
     cfd.getDigest() // Obtiene el digest
     Key key = KeyLoader.loadPKCS8PrivateKey(new FileInputStream(keyfile),  password);
-    cfd.getSignature(key); // Obtiene la firma utilizando la llave privada
+    cfd.getSignature(key); // Obtiene la firma utilizando la llave privada   
+    Certificate cert = KeyLoader.loadX509Certificate(new FileInputStream(certFile));
+    cfd.sign(key, cert); // Firma el certificado
     cfd.verify(); // Verifica un certificado ya firmado
 }}}
 
