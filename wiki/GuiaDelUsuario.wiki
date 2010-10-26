@@ -48,11 +48,11 @@ Un flujo típico para _firmar_ un CFD se ve así:
 
 {{{
     CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea el CFD a partir de un archivo
-    cfd.validate(); // Valida el XML, que todos los elementos estén presentes
+    cfd.validate(); // Valida que todos los elementos del XML estén presentes de acuerdo al XSD
     Key key = KeyLoader.loadPKCS8PrivateKey(new FileInputStream(keyfile),  password); // Carga la llave privada
     Certificate cert = KeyLoader.loadX509Certificate(new FileInputStream(certFile)); // Carga el certificado
-    cfd.sign(key, cert); // Firma el comprobante
-    cfd.marshal(new FileOutputStream(outFile)); // Serializa el comprobante ya firmado
+    cfd.sign(key, cert); // Firma el CFD
+    cfd.marshal(new FileOutputStream(outFile)); // Serializa el CFD ya firmado
 }}}
 
 Un flujo típico para _verificar_ un CFD, se ve así:
@@ -60,7 +60,7 @@ Un flujo típico para _verificar_ un CFD, se ve así:
 {{{
     CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea el CFD a partir de un archivo
     cfd.validate(); // Valida el XML, que todos los elementos estén presentes
-    cfd.verify(); // Verifica un comprobante ya firmado
+    cfd.verify(); // Verifica un CFD ya firmado
 }}}
 
 
