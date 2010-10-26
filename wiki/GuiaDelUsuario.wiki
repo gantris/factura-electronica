@@ -95,18 +95,14 @@ Asegurate de incluir las clases compiladas en el CLASSPATH, esto lo puedes hacer
   * en `*`nix: `export CLASSPATH=target/classes/`
   * en windows: `set CLASSPATH=target\classes\`
 
-=== Validar el XML de un CFD ===
-
-Para validar el XML de ejemplo contra el esquema, utiliza el siguiente comando:
+  * Para validar el XML de ejemplo contra el esquema, utiliza el siguiente comando:
 
 {{{ java mx.bigdata.cfdi.tools.CLI valida resources/xml/cfdv3.xml }}}
 
-Reemplaza el primer argumento para validar otros XMLs
-
-=== Verificar el sello de un CFD ===
-
-Para verificar el sello del XML de ejemplo, utiliza el siguiente comando:
+  * Para verificar el sello del CDF de ejemplo, utiliza el siguiente comando:
 
 {{{ java mx.bigdata.cfdi.tools.CLI verifica resources/xml/cfdv3.xml }}}
 
-Reemplaza el primer argumento para verificar otros CFDs
+  * Para firmar el CDF de ejemplo, utiliza el siguiente comando:
+
+{{{ java mx.bigdata.cfdi.tools.CLI firma resources/xml/cfdv3.xml resources/certs/emisor.key a0123456789 cfdv3_firmado.xml }}}
