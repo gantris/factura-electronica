@@ -1,10 +1,14 @@
 #summary Preguntas Frecuentes
 #labels Featured
 
-*1.  ¿Puedo utilizar los componentes en aplicaciones comerciales?*
+1.  *¿Puedo utilizar los componentes en aplicaciones comerciales?*
 
 Si, siempre y cuando se atribuya adecuadamente según los términos de la [http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0]. Para más información consulta la página de  [http://www.apache.org/foundation/licence-FAQ.html preguntas frecuentes] de la Licencia.
 
-*2.  ¿Cuáles son las dependencias externas de los componentes?*
+*2.*  ¿Qué busca la librería ?
+
+La librería busca tener una base de código común para el desarrollo de aplicaciones de factura electrónica escritas en Java, a fin de que los desarrolladores puedan enfocar sus esfuerzos en generar aplicaciones con mayor valor agregado, al mismo tiempo que las librerías se benefician de su uso generalizado y las mejoras provenientes de la comunidad.
+
+*3.*  ¿Cuáles son las dependencias de los componentes?
 
 Actualmente los componentes dependen de las siguientes librerías: [http://code.google.com/p/guava-libraries/ guava-libraries], [http://commons.apache.org/codec/ Commons Codec] y [http://juliusdavies.ca/commons-ssl/ not-yet-commons-ssl], todas ellas disponibles bajo la Licencia Apache, Version 2.0.
