@@ -30,11 +30,15 @@ Se puede crear un `CFDv3` de dos formas,
 
   * A partir de un `InputStream`, que puede ser un archivo previamente  generado o el contenido de un request HTTP, etc.:
 {{{
-CFDv3 cfd = new CFDv3(new FileInputStream(file));
+    CFDv3 cfd = new CFDv3(new FileInputStream(file));
 }}}
   * O a partir de un `Comprobante`, que es el modelo que representa al XSD en la aplicación: 
 {{{
-CFDv3 cfd = new CFDv3(new Comprobante());
+    ObjectFactory of = new ObjectFactory();
+    Comprobante comp = of.createComprobante();
+    comp.setVersion("3.0");
+    comp.setFecha(new Date());
+    CFDv3 cfd = new CFDv3(comp);
 }}}
 
 === Principales operaciones === 
@@ -62,6 +66,8 @@ Un flujo típico para _verificar_ un CFD, se ve así:
 
 
 === Creación de un `Comprobante` en forma procedural ===
+
+Para crear un componente de forma procedural es importante utilizar los métodos de la clase `ObjectFactory`
 
 {{{
     ObjectFactory of = new ObjectFactory();
