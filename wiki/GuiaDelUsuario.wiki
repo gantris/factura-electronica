@@ -98,15 +98,13 @@ Asegurate de incluir las clases compiladas y las dependencias en el CLASSPATH, e
 
 target/dependency/not-yet-commons-ssl-0.3.11.jar:target/dependency/guava-r06.jar:target/dependency/commons-codec-1.4.jar:target/dependency/junit-4.8.1.jar
 
-
-  * en `*`nix: 
-
 {{{
+# en *nix:
 export CLASSPATH=target/classes/:target/dependency/not-yet-commons-ssl-0.3.11.jar:target/dependency/guava-r06.jar:target/dependency/commons-codec-1.4.jar
 }}}
 
-  * en windows: 
 {{{
+% en windows: 
 set CLASSPATH=target\classes\:target\dependency\not-yet-commons-ssl-0.3.11.jar:target\dependency\guava-r06.jar:target\dependency\commons-codec-1.4.jar
 }}}
 
