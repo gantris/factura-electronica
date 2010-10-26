@@ -61,7 +61,7 @@ Un flujo típico para _verificar_ un CFD, se ve así:
 }}}
 
 
-=== Creación programática de un Comprobante ===
+=== Creación de un `Comprobante` en forma procedural ===
 
 {{{
     ObjectFactory of = new ObjectFactory();
