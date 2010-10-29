@@ -1,7 +1,7 @@
 #summary Guía del Usuario
 #labels Featured
 
-*`***`nota: los componentes están en desarrollo y su interfaz puede seguir cambiando antes de alcanzar la versión 0.2.0`***`*
+*`***`nota: la librería se encuentra actualmente en desarrollo y su interfaz puede seguir cambiando hasta alcanzar la versión 0.2`***`*
 
 == Pre-requisitos ==
  
