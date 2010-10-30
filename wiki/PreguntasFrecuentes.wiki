@@ -6,6 +6,7 @@
 Si, siempre y cuando se atribuya adecuadamente según los términos de la [http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0]. Para más información consulta la página de  [http://www.apache.org/foundation/licence-FAQ.html preguntas frecuentes] de la Licencia.
 
 2. *¿Cuáles características del CFDI implementa?*
+
 La librería implementa el sellado de los CFDI con SHA1 y RSA, así como la verificación del sello. Por otro lado implementa el timbrado de los CFDI así como la verificación del timbre.
 
 3. * ¿Cuáles son las dependencias de los componentes?*
