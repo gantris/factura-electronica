@@ -98,12 +98,12 @@ Asegurate de incluir las clases compiladas y las dependencias en el CLASSPATH, e
 
 {{{
 # en *nix:
-export CLASSPATH=target/classes/:target/dependency/not-yet-commons-ssl-0.3.11.jar:target/dependency/guava-r06.jar:target/dependency/commons-codec-1.4.jar
+export CLASSPATH=target/classes/:target/dependency/not-yet-commons-ssl-0.3.11.jar:target/dependency/guava-r06.jar:target/dependency/commons-codec-1.4.jar:target/dependency/jaxb-api-2.2.jar:target/dependency/jaxb-impl-2.2.jar
 }}}
 
 {{{
 rem en windows: 
-set CLASSPATH=target\classes\;target\dependency\not-yet-commons-ssl-0.3.11.jar;target\dependency\guava-r06.jar;target\dependency\commons-codec-1.4.jar
+set CLASSPATH=target\classes\;target\dependency\not-yet-commons-ssl-0.3.11.jar;target\dependency\guava-r06.jar;target\dependency\commons-codec-1.4.jar;target\dependency\jaxb-api-2.2.jar;target\dependency\jaxb-impl-2.2.jar
 }}}
 
   * Para validar el XML de ejemplo contra el esquema, utiliza el siguiente comando:
