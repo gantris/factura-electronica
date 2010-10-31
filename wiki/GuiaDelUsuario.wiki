@@ -144,5 +144,5 @@ set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
 
 ¿Tienes algún problema o sugerencia de mejora?  
 
-Busca la respuesta en la sección de [PreguntasFrecuentes preguntas frecuentes] o en la sección de [seguimiento]. Si no encuentras la respuesta, crea una nueva entrada utilizando la liga de __New Issue_, y haremos todo lo posible por solucionarlo.
+Busca la respuesta en la sección de [PreguntasFrecuentes preguntas frecuentes] o en la sección de [http://code.google.com/p/factura-electronica/issues/list seguimiento]. Si no encuentras la respuesta, crea una nueva entrada utilizando la liga de __New Issue_ y haremos todo lo posible por solucionarlo.
  
