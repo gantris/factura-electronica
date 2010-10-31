@@ -9,15 +9,19 @@ Si, siempre y cuando se atribuya adecuadamente según los términos de la [http:
 
 La librería implementa el sellado de los CFDI con SHA1 y RSA, así como la verificación del sello. Por otro lado implementa el timbrado de los CFDI así como la verificación del timbre.
 
-3. * ¿Cuáles son las dependencias de los componentes?*
+3. *¿Qué debo hacer para reportar un problema o sugerir una mejora?
+
+En la sección de _Issues_, utiliza el buscador para ver si alguien mas ha tenido el mismo problema o esa mjora ya se ha sugerido con anterioridad. Si no lo encuentras crea uno nuevo utilizando la liga _New issue_
+
+4. * ¿Cuáles son las dependencias de los componentes?*
 
 Actualmente los componentes dependen de las siguientes librerías: [http://code.google.com/p/guava-libraries/ guava-libraries], [http://commons.apache.org/codec/ Commons Codec] y [http://juliusdavies.ca/commons-ssl/ not-yet-commons-ssl], todas ellas disponibles bajo la Licencia Apache, Version 2.0 y las librerías de [https://jaxb.dev.java.net/ JAXB] disponibles bajo la licencia [http://www.sun.com/cddl/ CDDL]. Adicionalmente se utiliza la librería [http://www.bouncycastle.org/java.html Bouncy Castle] para depurar la aplicación.
 
-4.  *¿Cuál es el objetivo de escribir esta librería?*
+5.  *¿Cuál es el objetivo de escribir esta librería?*
 
 La librería busca tener una base de código común para el desarrollo de aplicaciones de factura electrónica escritas en Java, a fin de que los desarrolladores  dirigan sus esfuerzos a generar aplicaciones con mayor valor agregado. Al mismo tiempo que las librerías se benefician de su uso generalizado y las mejoras provenientes de la comunidad.
 
-5. *¿Cuáles son las siguientes metas del proyecto?
+6. *¿Cuáles son las siguientes metas del proyecto?
 
 Los metas son las siguientes:
   * Programar las pruebas unitarias
