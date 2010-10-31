@@ -116,6 +116,8 @@ rem en windows:
 set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
 }}}
 
+=== Ejemplos ===
+
   * Para validar el XML de ejemplo contra el esquema, utiliza el siguiente comando:
 
 {{{ java mx.bigdata.cfdi.tools.CLI valida resources/xml/cfdv3.xml }}}
