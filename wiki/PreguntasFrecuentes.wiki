@@ -11,7 +11,7 @@ La librería implementa el sellado de los CFDI con SHA1 y RSA, así como la veri
 
 3. *¿Qué debo hacer para reportar un problema o sugerir una mejora?
 
-En la sección de _Issues_, utiliza el buscador para ver si alguien mas ha tenido el mismo problema o esa mjora ya se ha sugerido con anterioridad. Si no lo encuentras crea uno nuevo utilizando la liga _New issue_
+En la sección [http://code.google.com/p/factura-electronica/issues/list Issues], utiliza el buscador para ver si alguien mas ha tenido el mismo problema o ya se ha sugerido esa mejora. Si no lo encuentras crea uno nuevo utilizando la liga _New issue_
 
 4. * ¿Cuáles son las dependencias de los componentes?*
 
