@@ -3,9 +3,17 @@
 
 *`***`nota: la librería se encuentra actualmente en desarrollo y su interfaz puede seguir cambiando hasta alcanzar la versión 0.2`***`*
 
-== Pre-requisitos ==
+== Librería de componentes ==
+
+La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD), la clase principal es `CFDv3` que representa y tiene la lógica correspondiente a la versión 3.0 del CFD.
+
+_Nota:  Puedes encontrar un ejemplo del uso de las librerías en la clase_ `mx.bigdata.cfdi.examples.Main`.
  
-Para trabajar con los componentes de factura electrónica debes tener instalados los siguientes sistemas:
+== Código fuente ===
+
+=== Pre-requisitos ===
+
+Para trabajar con el código fuente de la librería de factura electrónica debes tener instalados los siguientes sistemas:
 
   * [http://www.java.com/en/download/manual.jsp Java 6]
   * [http://maven.apache.org/download.html Maven]
@@ -20,15 +28,11 @@ este comando preparará todas las dependencias y generará el código necesario 
 
 === Ejecutar el programa de ejemplo ===
 
+Para ejecutar el programa de ejemplo, utiliza el comando:
+
 {{{mvn exec:java}}}
 
-== Librería de componentes ==
-
-La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD), la clase principal es `CFDv3` que representa y tiene la lógica correspondiente a la versión 3.0 del CFD.
-
-_Nota:  Puedes encontrar un ejemplo del uso de las librerías en la clase_ `mx.bigdata.cfdi.examples.Main`.
-
-=== Creación del CFDv3 ===
+== Creación del CFDv3 ==
 
 Se puede crear un `CFDv3` de dos formas,
 
@@ -120,4 +124,4 @@ set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
 
   * Para verificar el sello del CDF de ejemplo, utiliza el siguiente comando:
 
-{{{ java mx.bigdata.cfdi.tools.CLI verifica cfdv3_firmado.xmll }}}
+{{{ java mx.bigdata.cfdi.tools.CLI verifica cfdv3_firmado.xml }}}
