@@ -1,7 +1,7 @@
 #summary Guía del Usuario
 #labels Featured
 
-*`***`nota: la librería se encuentra actualmente en desarrollo y su interfaz puede seguir cambiando hasta alcanzar la versión 0.2`***`*
+*`***`nota: la librería se encuentra actualmente en desarrollo y su interfaz puede cambiar hasta alcanzar la versión 0.2`***`*
 
 == Librería de componentes ==
 
@@ -102,7 +102,9 @@ Para poder ejecutar los programas desde la línea de comandos ejecuta la siguien
 
 {{{mvn assembly:assembly}}}
 
-Esto generará un jar `cfdi-XXXX-jar-with-dependencies.jar` con las clases compiladas y todas las dependencias necesarias para ejecutar el programa desde la línea de comandos. Asegurate de incluir las clases compiladas y las dependencias en el CLASSPATH, esto lo puedes hacer ejecutando el siguiente comando:
+Esto generará un jar `cfdi-XXXX-jar-with-dependencies.jar` con las clases compiladas y todas las dependencias necesarias para ejecutar el programa desde la línea de comandos. 
+
+Asegurate de incluir las clases compiladas y las dependencias en el CLASSPATH, esto lo puedes hacer ejecutando el siguiente comando:
 
 {{{
 # en *nix:
@@ -133,3 +135,5 @@ set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
   * Para verificar el timbre del CFD, utiliza el siguiente comando:
 
 {{{ java mx.bigdata.cfdi.tools.CLI verifica-timbrado cfdv3_timbrado.xml resources/certs/pac.cer }}}
+
+_nota: estos comando no regresan ningún mensaje si las operaciones fueron exitosas_
