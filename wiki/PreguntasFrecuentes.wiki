@@ -29,7 +29,7 @@ La librería busca tener una base de código común para el desarrollo de aplica
 
 7. *¿Cuáles son las siguientes metas del proyecto?
 
-Los metas son las siguientes:
+Las siguientes metas son:
   * Programar las pruebas unitarias
   * Implementar un componente para generar las peticiones para el servicio de cancelación de CFDI
   * Mejorar los mensajes de error del programa de línea de comandos
