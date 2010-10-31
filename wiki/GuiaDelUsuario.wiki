@@ -139,3 +139,10 @@ set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
 {{{ java mx.bigdata.cfdi.tools.CLI verifica-timbrado cfdv3_timbrado.xml resources/certs/pac.cer }}}
 
  _Nota: Estos comandos no regresan ningún mensaje si las operaciones fueron exitosas_
+
+== Dudas y comentarios ==
+
+¿Tienes algún problema o sugerencia de mejora?  
+
+Busca la respuesta en la sección de [PreguntasFrecuentes preguntas frecuentes] o en la sección de [seguimiento]. Si no encuentras la respuesta, crea una nueva entrada utilizando la liga de __New Issue_, y haremos todo lo posible por solucionarlo.
+ 
