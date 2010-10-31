@@ -16,3 +16,10 @@ Actualmente los componentes dependen de las siguientes librerías: [http://code.
 4.  *¿Cuál es el objetivo de escribir esta librería?*
 
 La librería busca tener una base de código común para el desarrollo de aplicaciones de factura electrónica escritas en Java, a fin de que los desarrolladores  dirigan sus esfuerzos a generar aplicaciones con mayor valor agregado. Al mismo tiempo que las librerías se benefician de su uso generalizado y las mejoras provenientes de la comunidad.
+
+5. *¿Cuáles son las siguientes metas del proyecto?
+
+Los metas son las siguientes:
+  * Programar las pruebas unitarias
+  * Implementar un componente para generar las peticiones para el servicio de cancelación de CFDI
+  * Mejorar los mensajes de error del programa de línea de comandos
