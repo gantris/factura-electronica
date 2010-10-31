@@ -13,15 +13,21 @@ La librería implementa el sellado de los CFDI con SHA1 y RSA, así como la veri
 
 En la sección [http://code.google.com/p/factura-electronica/issues/list Issues], utiliza el buscador para ver si alguien mas ha tenido el mismo problema o ya se ha sugerido esa mejora. Si no lo encuentras crea uno nuevo utilizando la liga _New issue_
 
-4. * ¿Cuáles son las dependencias de los componentes?*
+4. *¿Cómo puedo descargar el código?
+
+Puedes descargarlo en http://code.google.com/p/factura-electronica/source/checkout.
+
+En general puedes utilizar el .jar de la versión más reciente que esté disponible en http://code.google.com/p/factura-electronica/downloads/list, para realizar las funciones principales de los CFD.
+
+5. * ¿Cuáles son las dependencias de los componentes?*
 
 Actualmente los componentes dependen de las siguientes librerías: [http://code.google.com/p/guava-libraries/ guava-libraries], [http://commons.apache.org/codec/ Commons Codec] y [http://juliusdavies.ca/commons-ssl/ not-yet-commons-ssl], todas ellas disponibles bajo la Licencia Apache, Version 2.0 y las librerías de [https://jaxb.dev.java.net/ JAXB] disponibles bajo la licencia [http://www.sun.com/cddl/ CDDL]. Adicionalmente se utiliza la librería [http://www.bouncycastle.org/java.html Bouncy Castle] para depurar la aplicación.
 
-5.  *¿Cuál es el objetivo de escribir esta librería?*
+6.  *¿Cuál es el objetivo de escribir esta librería?*
 
 La librería busca tener una base de código común para el desarrollo de aplicaciones de factura electrónica escritas en Java, a fin de que los desarrolladores  dirigan sus esfuerzos a generar aplicaciones con mayor valor agregado. Al mismo tiempo que las librerías se benefician de su uso generalizado y las mejoras provenientes de la comunidad.
 
-6. *¿Cuáles son las siguientes metas del proyecto?
+7. *¿Cuáles son las siguientes metas del proyecto?
 
 Los metas son las siguientes:
   * Programar las pruebas unitarias
