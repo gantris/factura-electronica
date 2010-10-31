@@ -74,7 +74,7 @@ Un flujo típico para _verificar_ un CFD, se ve así:
 }}}
 
 
-=== Creación de un `Comprobante` en forma procedural ===
+=== Creación de un `Comprobante` utilizando la librería ===
 
 Para crear un componente de forma procedural es importante utilizar los métodos de la clase `ObjectFactory`
 
