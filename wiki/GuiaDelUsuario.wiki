@@ -118,23 +118,23 @@ set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
 
 === Ejemplos ===
 
-  * Para validar el XML de ejemplo contra el esquema, utiliza el siguiente comando:
+  * Para validar el XML de ejemplo contra el esquema:
 
 {{{ java mx.bigdata.cfdi.tools.CLI valida resources/xml/cfdv3.xml }}}
 
-  * Para sellar el CFD, utiliza el siguiente comando:
+  * Para sellar el CFD:
 
 {{{ java mx.bigdata.cfdi.tools.CLI firma resources/xml/cfdv3.xml resources/certs/emisor.key a0123456789 resources/certs/emisor.cer cfdv3_sellado.xml }}}
 
-  * Para verificar el sello del CFD, utiliza el siguiente comando:
+  * Para verificar el sello del CFD:
 
 {{{ java mx.bigdata.cfdi.tools.CLI verifica cfdv3_sellado.xml }}}
 
-  * Para timbrar el CFD, utiliza el siguiente comando:
+  * Para timbrar el CFD:
 
 {{{ java mx.bigdata.cfdi.tools.CLI timbrado cfdv3_sellado.xml resources/certs/pac.key a0123456789 cfdv3_timbrado.xml}}}
 
-  * Para verificar el timbre del CFD, utiliza el siguiente comando:
+  * Para verificar el timbre del CFD:
 
 {{{ java mx.bigdata.cfdi.tools.CLI verifica-timbrado cfdv3_timbrado.xml resources/certs/pac.cer }}}
 
