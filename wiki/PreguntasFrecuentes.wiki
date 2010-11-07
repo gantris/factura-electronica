@@ -31,5 +31,6 @@ La librería busca tener una base de código común para el desarrollo de aplica
 
 Las siguientes metas son:
   * Programar las pruebas unitarias
+  * Implementar un componente para el CFD versión 2.0
   * Implementar un componente para generar las peticiones para el servicio de cancelación de CFDI
   * Mejorar los mensajes de error del programa de línea de comandos
