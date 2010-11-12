@@ -1,4 +1,6 @@
-#summary Registro de cambios (CHANGES)
+#summary Registro de cambios
+
+CAMBIOS
 
 *0.1.3* 
 
@@ -6,3 +8,6 @@
   * Se cambió la estructura de los _packages_ al incluir la versión dos del CFD
   * Se eliminaron las dependencias con hojas de estilo _XSLT_ externas, ahora están incluidas en la librería
   * Se programaron pruebas unitarias para cada uno de los componentes 
+
+*0.1.2*
+  * Primera versión estable
