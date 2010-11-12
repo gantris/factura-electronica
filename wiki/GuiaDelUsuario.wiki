@@ -32,7 +32,7 @@ Para ejecutar el programa de ejemplo, utiliza el comando:
 
 {{{mvn exec:java}}}
 
-== Creación del CFDv3 ==
+== Creación de un CFDv3 ==
 
 Se puede crear un `CFDv3` de dos formas,
 
@@ -50,9 +50,27 @@ Se puede crear un `CFDv3` de dos formas,
     CFDv3 cfd = new CFDv3(comp);
 }}}
 
+== Creación de un CFDv2 ==
+
+Se puede crear un `CFDv2` de dos formas,
+
+  * A partir de un `InputStream`, que puede ser un archivo previamente  generado o el contenido de un request HTTP, etc.:
+{{{
+    CFDv2 cfd = new CFDv2(new FileInputStream(file));
+}}}
+  * O a partir de un `Comprobante`, que es el modelo que representa al XSD en la aplicación: 
+{{{
+    ObjectFactory of = new ObjectFactory();
+    Comprobante comp = of.createComprobante();
+    comp.setVersion("2.0");
+    comp.setFecha(new Date());
+    ...
+    CFDv2 cfd = new CFDv2(comp);
+}}}
+
 === Principales operaciones === 
 
-El CFDv3, tiene dos métodos principales firmar `sign(Key key, Certificate cert)` y verificar `verify()`; además de estos métodos tiene algunos métodos intermedios que permiten depurar la información.
+El CFDv3 y el CFDv2, tienen dos métodos principales`sellar(Key key, Certificate cert)` y `verificar()`.
 
 Un flujo típico para _firmar_ un CFD se ve así:
 
@@ -73,6 +91,14 @@ Un flujo típico para _verificar_ un CFD, se ve así:
     cfd.verificar(); // Verifica un CFD ya firmado
 }}}
 
+Además de estas operaciones el CFDv2 permite verificar el CFD utilizando un certificado externo:
+
+{{{
+    CFDv2 cfd = new CFDv2(new FileInputStream(file)); // Crea el CFD a partir de un archivo
+    Certificate cert = KeyLoader.loadX509Certificate(new FileInputStream(certFile)); // Carga el certificado
+    cfd.validar(); // Valida el XML, que todos los elementos estén presentes
+    cfd.verificar(cert); // Verifica un CFD ya firmado
+}}}
 
 === Creación de un `Comprobante` utilizando la librería ===
 
@@ -124,7 +150,7 @@ set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
 
   * Para sellar el CFD:
 
-{{{ java mx.bigdata.sat.cfdi.tools.CLI firma resources/xml/cfdv3.xml resources/certs/emisor.key a0123456789 resources/certs/emisor.cer cfdv3_sellado.xml }}}
+{{{ java mx.bigdata.sat.cfdi.tools.CLI firmar resources/xml/cfdv3.xml resources/certs/emisor.key a0123456789 resources/certs/emisor.cer cfdv3_sellado.xml }}}
 
   * Para verificar el sello del CFD:
 
@@ -138,7 +164,7 @@ set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
 
 {{{ java mx.bigdata.sat.cfdi.tools.CLI verificar-timbrado cfdv3_timbrado.xml resources/certs/pac.cer }}}
 
- _Nota: Estos comandos no regresan ningún mensaje si las operaciones fueron exitosas_
+ _Nota: Estos comandos no regresan ningún mensaje si la operación fue exitosa_
 
 == Dudas y comentarios ==
 
