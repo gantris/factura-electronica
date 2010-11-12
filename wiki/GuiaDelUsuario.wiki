@@ -5,9 +5,9 @@
 
 == Librería de componentes ==
 
-La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD), las clases principales son `CFDv3` y `CFDv2` que representa y tiene la lógica correspondiente a la versión 3.0 y 2.0 del CFD respectivamente.
+La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD), las clases principales son `CFDv3` y `CFDv2` que tienen la lógica correspondiente a las versiones 3.0 y 2.0 del CFD respectivamente.
 
-_Nota:  Puedes encontrar un ejemplo del uso de las librerías en las clases_ `mx.bigdata.sat.cfdi.examples.Main` y `mx.bigdata.sat.cfd.examples.Main` .
+_Nota:  Puedes encontrar un ejemplo del uso de las librerías en las clases:_ `mx.bigdata.sat.cfdi.examples.Main` y `mx.bigdata.sat.cfd.examples.Main` .
  
 == Código fuente ===
 
