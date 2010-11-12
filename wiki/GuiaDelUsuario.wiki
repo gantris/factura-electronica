@@ -5,9 +5,9 @@
 
 == Librería de componentes ==
 
-La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD), la clase principal es `CFDv3` que representa y tiene la lógica correspondiente a la versión 3.0 del CFD.
+La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD), las clases principales son `CFDv3` y `CFDv2` que representa y tiene la lógica correspondiente a la versión 3.0 y 2.0 del CFD respectivamente.
 
-_Nota:  Puedes encontrar un ejemplo del uso de las librerías en la clase_ `mx.bigdata.cfdi.examples.Main`.
+_Nota:  Puedes encontrar un ejemplo del uso de las librerías en las clases_ `mx.bigdata.sat.cfdi.examples.Main` y `mx.bigdata.sat.cfd.examples.Main` .
  
 == Código fuente ===
 
@@ -24,7 +24,7 @@ Para compilar los componentes, utiliza el comando:
 
 {{{mvn compile}}}
 
-este comando preparará todas las dependencias y generará el código necesario para trabajar con el XSD de la versión 3.0  del CFD y la versión 1.0 del TFD.
+este comando preparará todas las dependencias y generará el código necesario para trabajar con el XSD de la versión 3.0 y 2.0 del CFD y la versión 1.0 del TFD.
 
 === Ejecutar el programa de ejemplo ===
 
@@ -58,19 +58,19 @@ Un flujo típico para _firmar_ un CFD se ve así:
 
 {{{
     CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea el CFD a partir de un archivo
-    cfd.validate(); // Valida que todos los elementos del XML estén presentes de acuerdo al XSD
     Key key = KeyLoader.loadPKCS8PrivateKey(new FileInputStream(keyfile),  password); // Carga la llave privada
     Certificate cert = KeyLoader.loadX509Certificate(new FileInputStream(certFile)); // Carga el certificado
-    cfd.sign(key, cert); // Firma el CFD
-    cfd.marshal(new FileOutputStream(outFile)); // Serializa el CFD ya firmado
+    cfd.sellar(key, cert); // Firma el CFD
+    cfd.validar(); // Valida que todos los elementos del XML estén presentes de acuerdo al XSD
+    cfd.guardar(new FileOutputStream(outFile)); // Serializa el CFD ya firmado
 }}}
 
 Un flujo típico para _verificar_ un CFD, se ve así:
 
 {{{
     CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea el CFD a partir de un archivo
-    cfd.validate(); // Valida el XML, que todos los elementos estén presentes
-    cfd.verify(); // Verifica un CFD ya firmado
+    cfd.validar(); // Valida el XML, que todos los elementos estén presentes
+    cfd.verificar(); // Verifica un CFD ya firmado
 }}}
 
 
@@ -120,23 +120,23 @@ set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
 
   * Para validar el XML de ejemplo contra el esquema:
 
-{{{ java mx.bigdata.cfdi.tools.CLI valida resources/xml/cfdv3.xml }}}
+{{{ java mx.bigdata.sat.cfdi.tools.CLI validar resources/xml/cfdv3.xml }}}
 
   * Para sellar el CFD:
 
-{{{ java mx.bigdata.cfdi.tools.CLI firma resources/xml/cfdv3.xml resources/certs/emisor.key a0123456789 resources/certs/emisor.cer cfdv3_sellado.xml }}}
+{{{ java mx.bigdata.sat.cfdi.tools.CLI firma resources/xml/cfdv3.xml resources/certs/emisor.key a0123456789 resources/certs/emisor.cer cfdv3_sellado.xml }}}
 
   * Para verificar el sello del CFD:
 
-{{{ java mx.bigdata.cfdi.tools.CLI verifica cfdv3_sellado.xml }}}
+{{{ java mx.bigdata.sat.cfdi.tools.CLI verificar cfdv3_sellado.xml }}}
 
   * Para timbrar el CFD:
 
-{{{ java mx.bigdata.cfdi.tools.CLI timbrado cfdv3_sellado.xml resources/certs/pac.key a0123456789 cfdv3_timbrado.xml}}}
+{{{ java mx.bigdata.sat.cfdi.tools.CLI timbrar cfdv3_sellado.xml resources/certs/pac.key a0123456789 cfdv3_timbrado.xml}}}
 
   * Para verificar el timbre del CFD:
 
-{{{ java mx.bigdata.cfdi.tools.CLI verifica-timbrado cfdv3_timbrado.xml resources/certs/pac.cer }}}
+{{{ java mx.bigdata.sat.cfdi.tools.CLI verificar-timbrado cfdv3_timbrado.xml resources/certs/pac.cer }}}
 
  _Nota: Estos comandos no regresan ningún mensaje si las operaciones fueron exitosas_
 
