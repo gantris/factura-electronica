@@ -5,9 +5,11 @@
 
 Si, siempre y cuando se atribuya adecuadamente según los términos de la [http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0]. Para más información consulta la página de  [http://www.apache.org/foundation/licence-FAQ.html preguntas frecuentes] de la Licencia.
 
-2. *¿Cuáles características del CFDI implementa?*
+2. *¿Cuáles características implementa?*
 
 La librería implementa el sellado de los CFDI con SHA1 y RSA, así como la verificación del sello. Por otro lado implementa el timbrado de los CFDI así como la verificación del timbre.
+
+Adicionalmente se ha agregado soporte para el  sellado de los CFD v2.0 con SHA1 y RSA, así como la verificación del sello.
 
 3. *¿Qué debo hacer para reportar un problema o sugerir una mejora?
 
@@ -30,7 +32,6 @@ La librería busca tener una base de código común para el desarrollo de aplica
 7. *¿Cuáles son las siguientes metas del proyecto?
 
 Las siguientes metas son:
-  * Programar las pruebas unitarias
-  * Implementar un componente para el CFD versión 2.0
-  * Implementar un componente para generar las peticiones para el servicio de cancelación de CFDI
   * Mejorar los mensajes de error del programa de línea de comandos
+  * Implementar un componente para generar las peticiones para el servicio de cancelación de CFDI
+  * Agregar los esquemas de los complementos
