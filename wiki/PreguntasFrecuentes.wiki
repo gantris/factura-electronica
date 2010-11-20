@@ -25,11 +25,18 @@ En general puedes utilizar el .jar de la versión más reciente que esté dispon
 
 Actualmente los componentes dependen de las siguientes librerías: [http://code.google.com/p/guava-libraries/ guava-libraries], [http://commons.apache.org/codec/ Commons Codec] y [http://juliusdavies.ca/commons-ssl/ not-yet-commons-ssl], todas ellas disponibles bajo la Licencia Apache, Version 2.0 y las librerías de [https://jaxb.dev.java.net/ JAXB] disponibles bajo la licencia [http://www.sun.com/cddl/ CDDL]. Adicionalmente se utiliza la librería [http://www.bouncycastle.org/java.html Bouncy Castle] para depurar la aplicación.
 
-6.  *¿Cuál es el objetivo de escribir esta librería?*
+6.  *¿Cómo agrego el código a NetBeans o Eclipse?*
+ 
+  * Para agregar el código a NetBeans sigue las instrucciones en esta página: http://wiki.netbeans.org/MavenBestPractices
+
+  * Para agregar el código a Eclipse es necesario instalar el plugin [http://m2eclipse.sonatype.org/installing-m2eclipse.html m2eclipse] e importar el proyecto utilizando el menú: "File > Import > Maven > Existing Maven Projects".
+    * Finalmente sobre el proyecto de ecplise "Maven > Update Project Configuration" para generar los esquemas y actualizar la configuración del proyecto.
+
+7.  *¿Cuál es el objetivo de escribir esta librería?*
 
 La librería busca tener una base de código común para el desarrollo de aplicaciones de factura electrónica escritas en Java, a fin de que los desarrolladores  dirigan sus esfuerzos a generar aplicaciones con mayor valor agregado. Al mismo tiempo que las librerías se benefician de su uso generalizado y las mejoras provenientes de la comunidad.
 
-7. *¿Cuáles son las siguientes metas del proyecto?
+8. *¿Cuáles son las siguientes metas del proyecto?
 
 Las siguientes metas son:
   * Mejorar los mensajes de error del programa de línea de comandos
