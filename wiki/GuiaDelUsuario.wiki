@@ -7,7 +7,7 @@
 
 La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD), las clases principales son `CFDv3` y `CFDv2` que tienen la lógica correspondiente a las versiones 3.0 y 2.0 del CFD respectivamente.
 
-_Nota:  Puedes encontrar un ejemplo del uso de las librerías en las clases:_ [http://code.google.com/p/factura-electronica/source/browse/trunk/src/main/java/mx/bigdata/sat/cfdi/examples/Main.java mx.bigdata.sat.cfdi.examples.Main] y [http://code.google.com/p/factura-electronica/source/browse/trunk/src/main/java/mx/bigdata/sat/cfdi/examples/Main.java mx.bigdata.sat.cfd.examples.Main].
+_Nota:  Puedes encontrar un ejemplo del uso de las librerías en las clases:_ [http://code.google.com/p/factura-electronica/source/browse/trunk/src/main/java/mx/bigdata/sat/cfdi/examples/Main.java mx.bigdata.sat.cfdi.examples.Main] y [http://code.google.com/p/factura-electronica/source/browse/trunk/src/main/java/mx/bigdata/sat/cfd/examples/Main.java mx.bigdata.sat.cfd.examples.Main].
  
 == Creación de un CFDv3 ==
 
