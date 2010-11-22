@@ -139,12 +139,12 @@ Esto generará un jar `cfdi-XXXX-jar-with-dependencies.jar` con las clases compi
 Asegurate de incluir las clases compiladas y las dependencias en el CLASSPATH, esto lo puedes hacer ejecutando el siguiente comando:
 
 {{{
-# en *nix:
+# *nix:
 export CLASSPATH=target/cfdi-XXXX-jar-with-dependencies.jar
 }}}
 
 {{{
-rem en windows: 
+rem windows: 
 set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
 }}}
 
@@ -152,23 +152,52 @@ set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
 
   * Para validar un CFD sellado contra el esquema:
 
-{{{ java mx.bigdata.sat.cfdi.tools.CLI validar ejemplos/cfdv3.externo.xml }}}
+{{{ 
+# *nix:
+./bin/cfdi validar ejemplos/cfdv3.externo.xml
+}}}
+
+{{{ 
+rem windows:
+.\bin\cfdi validar ejemplos\cfdv3.externo.xml 
+}}}
 
   * Para verificar el sello del CFD:
 
-{{{ java mx.bigdata.sat.cfdi.tools.CLI verificar ejemplos/cfdv3.externo.xml }}}
+{{{ 
+# *nix:
+./bin/cfdi verificar ejemplos/cfdv3.externo.xml 
+}}}
+
+{{{ 
+rem windows:
+.\bin\cfdi verificar ejemplos\cfdv3.externo.xml 
+}}}
 
   * Para sellar el CFD:
 
-{{{ java mx.bigdata.sat.cfdi.tools.CLI sellar ejemplos/cfdv3.xml ejemplos/emisor.key a0123456789 ejemplos/emisor.cer cfdv3_sellado.xml }}}
+{{{ 
+# *nix:
+./bin/cfdi sellar ejemplos/cfdv3.xml ejemplos/emisor.key a0123456789 ejemplos/emisor.cer cfdv3_sellado.xml 
+}}}
+{{{ 
+rem windows:
+.\bin\cfdi sellar ejemplos\cfdv3.xml ejemplos\emisor.key a0123456789 ejemplos\emisor.cer cfdv3_sellado.xml 
+}}}
+
 
   * Para verificar un CFD timbrado:
 
-{{{ java mx.bigdata.sat.cfdi.tools.CLI verificar-timbrado ejemplos/cfdv3.externo.xml ejemplos/pac.cer }}}
+{{{ 
+# en *nix:
+./bin/cfdi verificar-timbrado ejemplos/cfdv3.externo.xml ejemplos/pac.cer
+}}}
 
-  * _Adicionalmente, para timbrar el CFD_:
+  * _Funcionalidad adicional, para timbrar el CFD_:
 
-{{{ java mx.bigdata.sat.cfdi.tools.CLI timbrar ejemplos/cfdv3.externo.xml ejemplos/pac.key a0123456789  ejemplos/pac.cer cfdv3_timbrado.xml}}}
+{{{ 
+# en *nix:
+./bin/cfdi timbrar ejemplos/cfdv3.externo.xml ejemplos/pac.key a0123456789  ejemplos/pac.cer cfdv3_timbrado.xml}}}
 
  _Nota: Estos comandos no regresan ningún mensaje si la operación fue exitosa_
 
