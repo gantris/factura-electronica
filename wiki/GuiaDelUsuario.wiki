@@ -79,26 +79,6 @@ Además de estas operaciones el CFDv2 permite verificar el CFD utilizando un cer
 
 == Creación de un `Comprobante` utilizando la librería ==
 
-Para crear un componente de forma procedural es necesario utilizar los métodos de la clase `ObjectFactory`
-
-{{{
-    ObjectFactory of = new ObjectFactory();
-    Comprobante comp = of.createComprobante();
-    comp.setVersion("3.0");
-    comp.setFecha(new Date());
-    comp.setFormaDePago("PAGO EN UNA SOLA EXHIBICION");
-    comp.setNoCertificado("30001000000100000800");
-    comp.setSubTotal(new BigDecimal("488.50"));
-    comp.setTotal(new BigDecimal("488.50"));
-    comp.setTipoDeComprobante("ingreso");
-    comp.setEmisor(createEmisor(of));
-    comp.setReceptor(createReceptor(of));
-    comp.setConceptos(createConceptos(of));
-    comp.setImpuestos(createImpuestos(of));
-    CFDv3 cfd = new CFDv3(comp); 
-    ...
-}}}
-
 Para crear un `Comprobante` de forma procedural es necesario utilizar los métodos de la clase [http://factura-electronica.googlecode.com/svn/javadoc/mx/bigdata/sat/cfdi/schema/ObjectFactory.html mx.bigdata.sat.cfdi.schema.ObjectFactory] para la versión 3.0 y [http://factura-electronica.googlecode.com/svn/javadoc/mx/bigdata/sat/cfd/schema/ObjectFactory.html mx.bigdata.sat.cfd.schema.ObjectFactory] para la versión 2.0.
 
 {{{
