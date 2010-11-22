@@ -3,7 +3,7 @@
 
 *`***`nota: la librería se encuentra actualmente en desarrollo y su interfaz puede cambiar hasta alcanzar la versión 0.2`***`*
 
-== Librería de componentes ==
+= Librería de componentes =
 
 La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal Digital (CFD), las clases principales son `CFDv3` y `CFDv2` que tienen la lógica correspondiente a las versiones 3.0 y 2.0 del CFD respectivamente.
 
@@ -99,41 +99,36 @@ Para crear un componente de forma procedural es importante utilizar los métodos
     ...
 }}}
 
-== Herramientas de línea de comandos ==
+= Uso de la librería =
 
-Para poder ejecutar los programas desde la línea de comandos ejecuta la siguiente instrucción:
+== Instalación ==
 
-{{{mvn assembly:assembly}}}
+  # Descarga la [http://code.google.com/p/factura-electronica/downloads/list última versión] de las librerías 
+  # Descomprime el archivo cfdi-X.Y.Z-bin.zip o  cfdi-X.Y.Z-bin.tar.gz
 
-Esto generará un jar `cfdi-XXXX-jar-with-dependencies.jar` con las clases compiladas y todas las dependencias necesarias para ejecutar el programa desde la línea de comandos. 
+=== Herramientas de línea de comandos ===
 
-Asegurate de incluir las clases compiladas y las dependencias en el CLASSPATH, esto lo puedes hacer ejecutando el siguiente comando:
-
-{{{
-# *nix:
-export CLASSPATH=target/cfdi-XXXX-jar-with-dependencies.jar
-}}}
-
-{{{
-rem windows: 
-set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
-}}}
-
-=== Ejemplos ===
+La librería incluye dos programas que te permiten trabajar con los CFD desde la linea de comandos: cfd para trabajar con la versión 2.0 y cfdi para trabajar con la versión 3.0. Para ejecutar estos comandos cambiate al directorio donde descomprimiste los archivos y ejecuta cualquiera de los siguientes ejemplos:  
 
   * Para validar un CFD sellado contra el esquema:
 
 {{{ 
-# *nix:
+# *nix
+# v3.0:
 ./bin/cfdi validar ejemplos/cfdv3.externo.xml
+# v2.0:
+./bin/cfd validar ejemplos/cfdv2.externo.xml
 }}}
 
 {{{ 
-rem windows:
+rem windows
+rem v3.0:
 .\bin\cfdi validar ejemplos\cfdv3.externo.xml 
+rem v2.0:
+.\bin\cfd validar ejemplos\cfdv2.externo.xml 
 }}}
 
-  * Para verificar el sello del CFD:
+  * Para verificar el sello del CFDI:
 
 {{{ 
 # *nix:
@@ -145,7 +140,7 @@ rem windows:
 .\bin\cfdi verificar ejemplos\cfdv3.externo.xml 
 }}}
 
-  * Para sellar el CFD:
+  * Para sellar el CFDI:
 
 {{{ 
 # *nix:
@@ -157,7 +152,7 @@ rem windows:
 }}}
 
 
-  * Para verificar un CFD timbrado:
+  * Para verificar un CFDI timbrado:
 
 {{{ 
 # en *nix:
@@ -168,7 +163,7 @@ rem windows:
 .\bin\cfdi verificar-timbrado ejemplos\cfdv3.externo.xml ejemplos\pac.cer
 }}}
 
-  * _Funcionalidad adicional, para timbrar el CFD_:
+  * _Funcionalidad adicional, para timbrar el CFDI_:
 
 {{{ 
 # en *nix:
