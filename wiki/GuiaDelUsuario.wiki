@@ -49,7 +49,7 @@ De igual forma se puede crear un `CFDv2`:
 
 === Principales operaciones === 
 
-Las clases CFDv3 y el CFDv2, tienen cuatro métodos principales`sellar()`, `validar()`,  `verificar()` y `guardar()`.
+Las clases CFDv3 y el CFDv2, tienen cuatro métodos principales `sellar()`, `validar()`,  `verificar()` y `guardar()`.
 
 El flujo típico para _firmar_ un CFDI versión 3.0 se ve así:
 {{{
