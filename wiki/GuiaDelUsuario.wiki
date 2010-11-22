@@ -201,11 +201,11 @@ rem windows:
 
 {{{ 
 # en *nix:
-./bin/cfdi timbrar ejemplos/cfdv3.externo.xml ejemplos/pac.key a0123456789  ejemplos/pac.cer cfdv3_timbrado.xml
+./bin/cfdi timbrar ejemplos/cfdv3.externo.xml ejemplos/pac.key a0123456789 ejemplos/pac.cer cfdv3_timbrado.xml
 }}}
 {{{ 
 rem windows:
-.\bin\cfdi timbrar ejemplos\cfdv3.externo.xml ejemplos\pac.key a0123456789  ejemplos\pac.cer cfdv3_timbrado.xml
+.\bin\cfdi timbrar ejemplos\cfdv3.externo.xml ejemplos\pac.key a0123456789 ejemplos\pac.cer cfdv3_timbrado.xml
 }}}
 
  _Nota: Estos comandos no regresan ningún mensaje si la operación fue exitosa_
