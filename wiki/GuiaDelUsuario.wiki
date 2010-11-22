@@ -45,7 +45,7 @@ Se puede crear un `CFDv2` de dos formas,
     CFDv2 cfd = new CFDv2(comp);
 }}}
 
-=== Principales operaciones === 
+== Principales operaciones == 
 
 El CFDv3 y el CFDv2, tienen dos métodos principales`sellar(Key key, Certificate cert)` y `verificar()`.
 
@@ -77,9 +77,9 @@ Además de estas operaciones el CFDv2 permite verificar el CFD utilizando un cer
     cfd.verificar(cert); // Verifica un CFD ya firmado
 }}}
 
-=== Creación de un `Comprobante` utilizando la librería ===
+== Creación de un `Comprobante` utilizando la librería ==
 
-Para crear un componente de forma procedural es importante utilizar los métodos de la clase `ObjectFactory`
+Para crear un componente de forma procedural es necesario utilizar los métodos de la clase `ObjectFactory`
 
 {{{
     ObjectFactory of = new ObjectFactory();
@@ -99,6 +99,51 @@ Para crear un componente de forma procedural es importante utilizar los métodos
     ...
 }}}
 
+Para crear un `Comprobante` de forma procedural es necesario utilizar los métodos de la clase [http://factura-electronica.googlecode.com/svn/javadoc/mx/bigdata/sat/cfdi/schema/ObjectFactory.html mx.bigdata.sat.cfdi.schema.ObjectFactory] para la versión 3.0 y [http://factura-electronica.googlecode.com/svn/javadoc/mx/bigdata/sat/cfd/schema/ObjectFactory.html mx.bigdata.sat.cfd.schema.ObjectFactory] para la versión 2.0.
+
+{{{
+    // CFDI versión 3.0
+    ObjectFactory of = new ObjectFactory();
+    Comprobante comp = of.createComprobante();
+    comp.setVersion("3.0");
+    comp.setFecha(new Date());
+    comp.setFormaDePago("PAGO EN UNA SOLA EXHIBICION");
+    comp.setSubTotal(new BigDecimal("488.50"));
+    comp.setTotal(new BigDecimal("488.50"));
+    comp.setTipoDeComprobante("ingreso");
+    comp.setEmisor(createEmisor(of));
+    comp.setReceptor(createReceptor(of));
+    comp.setConceptos(createConceptos(of));
+    comp.setImpuestos(createImpuestos(of));
+    CFDv3 cfd = new CFDv3(comp); 
+    ...
+}}}
+
+{{{
+    // CFD versión 2.0
+    ObjectFactory of = new ObjectFactory();
+    Comprobante comp = of.createComprobante();
+    comp.setVersion("2.0");
+    comp.setFecha(new Date());
+    comp.setSerie("ABCD");
+    comp.setFolio("2");
+    comp.setNoAprobacion(new BigInteger("49"));
+    comp.setAnoAprobacion(new BigInteger("2008"));
+    comp.setFormaDePago("UNA SOLA EXHIBICI\u00D3N");
+    comp.setSubTotal(new BigDecimal("2000.00"));
+    comp.setTotal(new BigDecimal("2320.00"));
+    comp.setDescuento(new BigDecimal("0.00"));
+    comp.setTipoDeComprobante("ingreso");
+    comp.setEmisor(createEmisor(of));
+    comp.setReceptor(createReceptor(of));
+    comp.setConceptos(createConceptos(of));
+    comp.setImpuestos(createImpuestos(of));
+    CFDv2 cfd = new CFDv2(comp); 
+    ...
+}}}
+
+_Nota:  Puedes encontrar un ejemplo de este código en las clases:_ [http://code.google.com/p/factura-electronica/source/browse/trunk/src/main/java/mx/bigdata/sat/cfdi/examples/ExampleCFDFactory.java mx.bigdata.sat.cfdi.examples.ExampleCFDFactory] y [http://code.google.com/p/factura-electronica/source/browse/trunk/src/main/java/mx/bigdata/sat/cfd/examples/ExampleCFDFactory.java mx.bigdata.sat.cfd.examples.ExampleCFDFactory].
+
 = Uso de la librería =
 
 == Instalación ==
@@ -106,7 +151,7 @@ Para crear un componente de forma procedural es importante utilizar los métodos
   # Descarga la [http://code.google.com/p/factura-electronica/downloads/list última versión] de las librerías 
   # Descomprime el archivo cfdi-X.Y.Z-bin.zip o  cfdi-X.Y.Z-bin.tar.gz
 
-=== Herramientas de línea de comandos ===
+== Herramientas de línea de comandos ==
 
 La librería incluye dos programas que te permiten trabajar con los CFD desde la linea de comandos: cfd para trabajar con la versión 2.0 y cfdi para trabajar con la versión 3.0. Para ejecutar estos comandos cambiate al directorio donde descomprimiste los archivos y ejecuta cualquiera de los siguientes ejemplos:  
 
