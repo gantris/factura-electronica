@@ -150,25 +150,25 @@ set CLASSPATH=target\cfdi-XXXX-jar-with-dependencies.jar
 
 === Ejemplos ===
 
-  * Para validar el XML de ejemplo contra el esquema:
+  * Para validar un CFD sellado contra el esquema:
 
-{{{ java mx.bigdata.sat.cfdi.tools.CLI validar resources/xml/cfdv3.xml }}}
-
-  * Para sellar el CFD:
-
-{{{ java mx.bigdata.sat.cfdi.tools.CLI firmar resources/xml/cfdv3.xml resources/certs/emisor.key a0123456789 resources/certs/emisor.cer cfdv3_sellado.xml }}}
+{{{ java mx.bigdata.sat.cfdi.tools.CLI validar ejemplos/cfdv3.externo.xml }}}
 
   * Para verificar el sello del CFD:
 
-{{{ java mx.bigdata.sat.cfdi.tools.CLI verificar cfdv3_sellado.xml }}}
+{{{ java mx.bigdata.sat.cfdi.tools.CLI verificar ejemplos/cfdv3.externo.xml }}}
 
-  * Para timbrar el CFD:
+  * Para sellar el CFD:
 
-{{{ java mx.bigdata.sat.cfdi.tools.CLI timbrar cfdv3_sellado.xml resources/certs/pac.key a0123456789 cfdv3_timbrado.xml}}}
+{{{ java mx.bigdata.sat.cfdi.tools.CLI sellar ejemplos/cfdv3.xml ejemplos/emisor.key a0123456789 ejemplos/emisor.cer cfdv3_sellado.xml }}}
 
-  * Para verificar el timbre del CFD:
+  * Para verificar un CFD timbrado:
 
-{{{ java mx.bigdata.sat.cfdi.tools.CLI verificar-timbrado cfdv3_timbrado.xml resources/certs/pac.cer }}}
+{{{ java mx.bigdata.sat.cfdi.tools.CLI verificar-timbrado ejemplos/cfdv3.externo.xml ejemplos/pac.cer }}}
+
+  * _Adicionalmente, para timbrar el CFD_:
+
+{{{ java mx.bigdata.sat.cfdi.tools.CLI timbrar ejemplos/cfdv3.externo.xml ejemplos/pac.key a0123456789  ejemplos/pac.cer cfdv3_timbrado.xml}}}
 
  _Nota: Estos comandos no regresan ningún mensaje si la operación fue exitosa_
 
