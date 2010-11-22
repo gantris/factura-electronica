@@ -131,46 +131,54 @@ rem v2.0:
   * Para verificar el sello del CFDI:
 
 {{{ 
-# *nix:
+# v3.0
 ./bin/cfdi verificar ejemplos/cfdv3.externo.xml 
+# v2.0
+./bin/cfd verificar ejemplos/cfdv2.externo.xml 
 }}}
 
 {{{ 
-rem windows:
+rem v3.0:
 .\bin\cfdi verificar ejemplos\cfdv3.externo.xml 
+rem v2.0:
+.\bin\cfd verificar ejemplos\cfdv2.externo.xml 
 }}}
 
   * Para sellar el CFDI:
 
 {{{ 
-# *nix:
+# v3.0:
 ./bin/cfdi sellar ejemplos/cfdv3.xml ejemplos/emisor.key a0123456789 ejemplos/emisor.cer cfdv3_sellado.xml 
+# v2.0:
+./bin/cfd sellar ejemplos/cfdv2.xml ejemplos/emisor.key a0123456789 ejemplos/emisor.cer cfdv2_sellado.xml 
 }}}
 {{{ 
-rem windows:
+rem v3.0:
 .\bin\cfdi sellar ejemplos\cfdv3.xml ejemplos\emisor.key a0123456789 ejemplos\emisor.cer cfdv3_sellado.xml 
+rem v2.0:
+.\bin\cfd sellar ejemplos\cfdv2.xml ejemplos\emisor.key a0123456789 ejemplos\emisor.cer cfdv2_sellado.xml 
 }}}
 
 
   * Para verificar un CFDI timbrado:
 
 {{{ 
-# en *nix:
+# v3.0:
 ./bin/cfdi verificar-timbrado ejemplos/cfdv3.externo.xml ejemplos/pac.cer
 }}}
 {{{ 
-rem windows:
+rem v3.0:
 .\bin\cfdi verificar-timbrado ejemplos\cfdv3.externo.xml ejemplos\pac.cer
 }}}
 
   * _Funcionalidad adicional, para timbrar el CFDI_:
 
 {{{ 
-# en *nix:
+# v3.0:
 ./bin/cfdi timbrar ejemplos/cfdv3.externo.xml ejemplos/pac.key a0123456789 ejemplos/pac.cer cfdv3_timbrado.xml
 }}}
 {{{ 
-rem windows:
+rem v3.0:
 .\bin\cfdi timbrar ejemplos\cfdv3.externo.xml ejemplos\pac.key a0123456789 ejemplos\pac.cer cfdv3_timbrado.xml
 }}}
 
