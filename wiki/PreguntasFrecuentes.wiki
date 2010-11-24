@@ -47,8 +47,6 @@ Puedes cambiar el TransformerFactory de la siguiente manera:
       cfd.setTransformerFactory(factory);
 }}}
 
-En esta liga hay un ejemplo de un CFD generado en GAE utilizando las librerías: http://factura-electronica.appspot.com/ejemplos/cfdv3
-
 7.  *¿Cuál es el objetivo de escribir esta librería?*
 
 La librería busca tener una base de código común para el desarrollo de aplicaciones de factura electrónica escritas en Java, a fin de que los desarrolladores  dirigan sus esfuerzos a generar aplicaciones con mayor valor agregado. Al mismo tiempo que las librerías se benefician de su uso generalizado y las mejoras provenientes de la comunidad.
