@@ -32,6 +32,22 @@ Actualmente los componentes dependen de las siguientes librerías: [http://code.
   * Para agregar el código a Eclipse es necesario instalar el plugin [http://m2eclipse.sonatype.org/installing-m2eclipse.html m2eclipse] e importar el proyecto utilizando el menú: "File > Import > Maven > Existing Maven Projects".
     * Finalmente sobre el proyecto de ecplise "Maven > Update Project Configuration" para generar los esquemas y actualizar la configuración del proyecto.
 
+7. * ¿Se pueden utilizar las librerías en Google App Engine?
+
+Si, las librerías están diseñadas para funcionar sobre [http://code.google.com/appengine/ Google App Engine]. Para hacerlo es necesario utilizar el TransofrmerFactory de [http://xml.apache.org/xalan-j/ Xalan], ya que la implementación de `javax.xml.transform.TransformerFactory` no es compatible con las restricciones de la plataforma en App Engine. 
+ 
+Puedes cambiar el TransformerFactory de la siguiente manera:
+
+{{{
+      CFDv3 cfd = new CFDv3(...);
+      TransformerFactory factory = TransformerFactory.newInstance(
+                        "org.apache.xalan.processor.TransformerFactoryImpl",
+                         Thread.currentThread().getContextClassLoader()); 
+      cfd.setTransformerFactory(factory);
+}}}
+
+En esta liga hay un ejemplo de un CFD generado en GAE utilizando las librerías: http://factura-electronica.appspot.com/ejemplos/cfdv3
+
 7.  *¿Cuál es el objetivo de escribir esta librería?*
 
 La librería busca tener una base de código común para el desarrollo de aplicaciones de factura electrónica escritas en Java, a fin de que los desarrolladores  dirigan sus esfuerzos a generar aplicaciones con mayor valor agregado. Al mismo tiempo que las librerías se benefician de su uso generalizado y las mejoras provenientes de la comunidad.
