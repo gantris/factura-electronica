@@ -25,12 +25,15 @@ En general puedes utilizar el .jar de la versión más reciente que esté dispon
 
 Actualmente los componentes dependen de las siguientes librerías: [http://code.google.com/p/guava-libraries/ guava-libraries], [http://commons.apache.org/codec/ Commons Codec] y [http://juliusdavies.ca/commons-ssl/ not-yet-commons-ssl], todas ellas disponibles bajo la Licencia Apache, Version 2.0 y las librerías de [https://jaxb.dev.java.net/ JAXB] disponibles bajo la licencia [http://www.sun.com/cddl/ CDDL]. Adicionalmente se utiliza la librería [http://www.bouncycastle.org/java.html Bouncy Castle] para depurar la aplicación.
 
-6.  *¿Cómo agrego el código a NetBeans o Eclipse?*
+6.  *¿Cómo agrego el código del SVN a NetBeans o Eclipse para compilar las librerías?*
  
-  * Para agregar el código a NetBeans sigue las instrucciones en esta página: http://wiki.netbeans.org/MavenBestPractices
+Para agregar el código a NetBeans importa el proyecto de la siguiente manera: “File > New Project > Maven > Maven Project with Existing POM” y  en el siguiente diálogo hay que seleccionar el directorio con el código descargado del svn. 
 
-  * Para agregar el código a Eclipse es necesario instalar el plugin [http://m2eclipse.sonatype.org/installing-m2eclipse.html m2eclipse] e importar el proyecto utilizando el menú: "File > Import > Maven > Existing Maven Projects".
-    * Finalmente sobre el proyecto de ecplise "Maven > Update Project Configuration" para generar los esquemas y actualizar la configuración del proyecto.
+ Para más información consulta: http://wiki.netbeans.org/MavenBestPractices
+
+Para agregar el código a Eclipse es necesario instalar el plugin [http://m2eclipse.sonatype.org/installing-m2eclipse.html m2eclipse] e importar el proyecto utilizando el menú: "File > Import > Maven > Existing Maven Projects".
+ 
+ Finalmente sobre el proyecto de ecplise "Maven > Update Project Configuration" para generar los esquemas y actualizar la configuración del proyecto.
 
 7. * ¿Se pueden utilizar las librerías en Google App Engine?
 
