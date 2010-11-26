@@ -53,11 +53,11 @@ En esta liga hay un ejemplo de un CFD generado en GAE utilizando las librerías:
 
 La forma más recomendable para incluir caracteres Unicode en el código fuente es en su forma escapada, así, no importando como esté codificado el archivo los caracteres siempre corresponderán a su representación Unicode. Por ejemplo:
 
-    comp.setFormaDePago("UNA SOLA EXHIBICI\u00D3N");
+    {{{comp.setFormaDePago("UNA SOLA EXHIBICI\u00D3N");}}}
 
 es equivalente a:
  
-    comp.setFormaDePago("UNA SOLA EXHIBICIÓN"); 
+   {{{comp.setFormaDePago("UNA SOLA EXHIBICIÓN");}}} 
 
 pero el primero es independiente de la codificación de la plataforma donde se compile el programa. Esto es importante ya que la codificación del CFD se hace en UTF-8 y una codificación distinta puede resultar en errores al verificar el certificado.
 
