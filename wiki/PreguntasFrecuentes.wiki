@@ -49,11 +49,23 @@ Puedes cambiar el TransformerFactory de la siguiente manera:
 
 En esta liga hay un ejemplo de un CFD generado en GAE utilizando las librerías: http://factura-electronica.appspot.com/ejemplos/cfdv3
 
-7.  *¿Cuál es el objetivo de escribir esta librería?*
+8. *¿Cómo utilizo caracteres Unicode (caracteres acentuados y otros caracteres especiales) dentro del código de mi programa?
+
+La forma más recomendable para incluir caracteres Unicode en el código fuente es en su forma escapada, así, no importando como esté codificado el archivo los caracteres siempre corresponderán a su representación Unicode. Por ejemplo:
+
+    comp.setFormaDePago("UNA SOLA EXHIBICI\u00D3N");
+
+es equivalente a:
+ 
+    comp.setFormaDePago("UNA SOLA EXHIBICIÓN"); 
+
+pero el primero es independiente de la codificación de la plataforma donde se compile el programa. Esto es importante ya que la codificación del CFD se hace en UTF-8 y una codificación distinta puede resultar en errores al verificar el certificado.
+
+9.  *¿Cuál es el objetivo de escribir esta librería?*
 
 La librería busca tener una base de código común para el desarrollo de aplicaciones de factura electrónica escritas en Java, a fin de que los desarrolladores  dirigan sus esfuerzos a generar aplicaciones con mayor valor agregado. Al mismo tiempo que las librerías se benefician de su uso generalizado y las mejoras provenientes de la comunidad.
 
-8. *¿Cuáles son las siguientes metas del proyecto?
+10. *¿Cuáles son las siguientes metas del proyecto?
 
 Las siguientes metas son:
   * Mejorar los mensajes de error del programa de línea de comandos
