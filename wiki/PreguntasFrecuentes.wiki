@@ -71,3 +71,7 @@ Las siguientes metas son:
   * Mejorar los mensajes de error del programa de línea de comandos
   * Implementar un componente para generar las peticiones para el servicio de cancelación de CFDI
   * Agregar los esquemas de los complementos
+
+11. *¿Cómo me entero de las actualizaciones y mejoras a las librerías?
+
+Entérate de las mejoras y actualizaciones a las librerías a través de nuestra [http://www.twitter.com/bigdata_mx cuenta de twitter]  [http://www.twitter.com/bigdata_mx http://twitter-badges.s3.amazonaws.com/t_mini-a.png]
