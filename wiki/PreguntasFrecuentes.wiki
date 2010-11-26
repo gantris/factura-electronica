@@ -51,15 +51,15 @@ En esta liga hay un ejemplo de un CFD generado en GAE utilizando las librerías:
 
 8. *¿Cómo utilizo caracteres Unicode (caracteres acentuados y otros caracteres especiales) dentro del código de mi programa?
 
-La forma recomendada para incluir caracteres Unicode en el código fuente es en su forma escapada, de esta forma los caracteres siempre corresponderán a su representación Unicode independientemente de como esté codificado el archivo. Por ejemplo:
+La forma recomendada para incluir caracteres Unicode en el código fuente es en su forma escapada, de esta forma los caracteres siempre corresponderán a su representación Unicode independientemente de como esté codificado el archivo. Por ejemplo, en lugar de utilizar: 
 
-    {{{comp.setFormaDePago("UNA SOLA EXHIBICI\u00D3N");}}}
-
-es equivalente a:
- 
    {{{comp.setFormaDePago("UNA SOLA EXHIBICIÓN");}}} 
 
-Ya que la primera forma es independiente de la codificación de la plataforma donde se compile el programa. Esto es importante ya que la codificación del CFD se hace en UTF-8 y una codificación distinta puede resultar en errores al verificar el certificado.
+es conveniente utilizar:
+
+   {{{comp.setFormaDePago("UNA SOLA EXHIBICI\u00D3N");}}}
+
+Ya que la segunda forma es independiente de la codificación de la plataforma donde se compile el programa. Esto es importante ya que la codificación del CFD se hace en UTF-8 y una codificación distinta puede resultar en errores al verificar el certificado.
 
 9.  *¿Cuál es el objetivo de escribir esta librería?*
 
