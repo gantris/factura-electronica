@@ -27,9 +27,21 @@ Actualmente los componentes dependen de las siguientes librerías: [http://code.
 
 6.  *¿Cómo agrego el código del SVN a NetBeans o Eclipse para compilar las librerías?*
 
+*_NetBeans_*
+
 Para agregar el código a NetBeans importa el proyecto de la siguiente manera: “File > New Project > Maven > Maven Project with Existing POM” y  en el siguiente diálogo hay que seleccionar el directorio con el código descargado del svn. 
 
 Para más información consulta: http://wiki.netbeans.org/MavenBestPractices
+
+`***` Debido a un [http://netbeans.org/bugzilla/show_bug.cgi?id=168237 Bug] en NetBeans al actualizar el código, es necesario llevar a cabo el siguiente procedimiento `***`
+
+ # "Boton derecho sobre el proyecto > Build"
+ # Navegar hasta: "Source Packages > mx.bigdata.sat.cfd > CFDv2.java"
+ # Scroll hasta el primer error en el código.
+
+Esto debe actualizar los fuentes y corregir los errores de compilación.
+
+*_Eclipse_*
 
 Para agregar el código a Eclipse es necesario instalar el plugin [http://m2eclipse.sonatype.org/installing-m2eclipse.html m2eclipse] e importar el proyecto utilizando el menú: "File > Import > Maven > Existing Maven Projects". Finalmente sobre el proyecto de ecplise "Maven > Update Project Configuration" para generar los esquemas y actualizar la configuración del proyecto.
 
