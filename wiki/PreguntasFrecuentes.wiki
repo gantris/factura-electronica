@@ -33,7 +33,7 @@ Para agregar el código a NetBeans importa el proyecto de la siguiente manera: �
 
 Para más información consulta: http://wiki.netbeans.org/MavenBestPractices
 
-`***` Debido a un [http://netbeans.org/bugzilla/show_bug.cgi?id=168237 Bug] en NetBeans al actualizar el código, es necesario llevar a cabo el siguiente procedimiento `***`
+`***` _Debido a un [http://netbeans.org/bugzilla/show_bug.cgi?id=168237 Bug] en NetBeans al actualizar el árbol de código, es necesario llevar a cabo el siguiente procedimiento:_ `***`
 
  # "Boton derecho sobre el proyecto > Build"
  # Navegar hasta: "Source Packages > mx.bigdata.sat.cfd > CFDv2.java"
