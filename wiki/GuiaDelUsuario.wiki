@@ -239,7 +239,7 @@ Para trabajar con el código fuente de la librería de factura electrónica debe
 
 Puedes obtener el código fuente de las librerías en la siguiente dirección: http://code.google.com/p/factura-electronica/source/checkout
 
-Revisa la información en las [PreguntasFrecuentes preguntas frecuentes] para agregar el código fuente a un IDE (Netbeans o Eclipse)
+Revisa la información en las [PreguntasFrecuentes preguntas frecuentes] para agregar el código fuente a un IDE (NetBeans o Eclipse)
 
 == Compilar los componentes  ==
 
