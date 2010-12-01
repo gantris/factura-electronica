@@ -29,17 +29,16 @@ Actualmente los componentes dependen de las siguientes librerías: [http://code.
 
 *_NetBeans_*
 
-Para agregar el código a NetBeans importa el proyecto de la siguiente manera: “File > New Project > Maven > Maven Project with Existing POM” y  en el siguiente diálogo hay que seleccionar el directorio con el código descargado del svn. 
+Para agregar el código a NetBeans es muy importante tener instalada al menos la versión 3.0.1 de [http://maven.apache.org/download.html Maven].  Para configurar la versión de Maven en NetBeans:
+
+ # "Tools > Options > Miscellaneous  > Maven"
+ # En External Maven Home, agrega el PATH a la versión 3.0.1 de Maven
+
+A continuación importa el proyecto de la siguiente manera: “File > New Project > Maven > Maven Project with Existing POM” y  en el siguiente diálogo selecciona el directorio con el código descargado del svn.  
+
+Finalmente construye el proyecto con el comando Build. Esto compila el código generado y corrige los errores de compilación que aparecen al importar el proyecto.
 
 Para más información consulta: http://wiki.netbeans.org/MavenBestPractices
-
-`***` _Debido a un [http://netbeans.org/bugzilla/show_bug.cgi?id=168237 Bug] en NetBeans al actualizar el árbol de código, es necesario llevar a cabo el siguiente procedimiento:_ `***`
-
- # "Boton derecho sobre el proyecto > Build"
- # Navegar hasta: "Source Packages > mx.bigdata.sat.cfd > CFDv2.java"
- # Scroll hasta el primer error en el código.
-
-Esto debe actualizar los fuentes y corregir los errores de compilación.
 
 *_Eclipse_*
 
