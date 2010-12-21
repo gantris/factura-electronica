@@ -89,7 +89,7 @@ Además de estas operaciones el CFDv2 permite verificar el CFD utilizando un cer
     cfd.verificar(cert); // Verifica un CFD ya firmado
 }}}
 
-_Nota:  Puedes encontrar un ejemplo del uso de las librerías en las clases:_ [http://code.google.com/p/factura-electronica/source/browse/trunk/src/main/java/mx/bigdata/sat/cfdi/examples/Main.java mx.bigdata.sat.cfdi.examples.Main] y [http://code.google.com/p/factura-electronica/source/browse/trunk/src/main/java/mx/bigdata/sat/cfd/examples/Main.java mx.bigdata.sat.cfd.examples.Main].
+_Nota:  Puedes encontrar un ejemplo del uso de las librerías en las clases:_ [http://code.google.com/p/factura-electronica/source/browse/trunk/cfdi-base/src/main/java/mx/bigdata/sat/cfdi/examples/Main.java mx.bigdata.sat.cfdi.examples.Main] y [http://code.google.com/p/factura-electronica/source/browse/trunk/cfdi-base/src/main/java/mx/bigdata/sat/cfd/examples/Main.java mx.bigdata.sat.cfd.examples.Main].
  
 === Creación de un `Comprobante` utilizando las librerías ===
 
@@ -136,7 +136,7 @@ Para crear un `Comprobante` de forma procedural es necesario utilizar los métod
     ...
 }}}
 
-_Nota:  Puedes encontrar un ejemplo de este código en las clases:_ [http://code.google.com/p/factura-electronica/source/browse/trunk/src/main/java/mx/bigdata/sat/cfdi/examples/ExampleCFDFactory.java mx.bigdata.sat.cfdi.examples.ExampleCFDFactory] y [http://code.google.com/p/factura-electronica/source/browse/trunk/src/main/java/mx/bigdata/sat/cfd/examples/ExampleCFDFactory.java mx.bigdata.sat.cfd.examples.ExampleCFDFactory].
+_Nota:  Puedes encontrar un ejemplo de este código en las clases:_ [http://code.google.com/p/factura-electronica/source/browse/trunk/cfdi-base/src/main/java/mx/bigdata/sat/cfdi/examples/ExampleCFDFactory.java mx.bigdata.sat.cfdi.examples.ExampleCFDFactory] y [http://code.google.com/p/factura-electronica/source/browse/trunk/cfdi-base/src/main/java/mx/bigdata/sat/cfd/examples/ExampleCFDFactory.java mx.bigdata.sat.cfd.examples.ExampleCFDFactory].
 
 = Uso de la librería =
 
