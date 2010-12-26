@@ -28,7 +28,7 @@ Se puede crear un `CFDv3` de tres formas:
     ...
     CFDv3 cfd = new CFDv3(comp);
 }}}
-  * (Nuevo en la versión 0.1.5) Cargar un `Comprobante` a partir de un archivo y posteriormente utilizarlo para crear un CFDv3: 
+  * Cargar un `Comprobante` a partir de un archivo y posteriormente utilizarlo para crear un CFDv3: 
 {{{
     Comprobante comp = CFDv3.newComprobante(new FileInputStream(file));
     ...
@@ -52,7 +52,7 @@ De igual forma se puede crear un `CFDv2`:
     ...
     CFDv2 cfd = new CFDv2(comp);
 }}}
-  * (Nuevo en la versión 0.1.5) Cargar un `Comprobante` a partir de un archivo y posteriormente utilizarlo para crear un CFDv2: 
+  * Cargar un `Comprobante` a partir de un archivo y posteriormente utilizarlo para crear un CFDv2: 
 {{{
     Comprobante comp = CFDv2.newComprobante(new FileInputStream(file));
     ...
@@ -68,8 +68,10 @@ El flujo típico para _firmar_ un CFDI versión 3.0 se ve así:
     CFDv3 cfd = new CFDv3(new FileInputStream(file)); // Crea el CFD a partir de un archivo
     Key key = KeyLoader.loadPKCS8PrivateKey(new FileInputStream(keyfile),  password); // Carga la llave privada
     Certificate cert = KeyLoader.loadX509Certificate(new FileInputStream(certFile)); // Carga el certificado
-    cfd.sellar(key, cert); // Firma el CFD
+    Comprobante sellado = cfd.sellarComprobante(key, cert); // Sellar CFD y obtener un Comprobante sellado
     cfd.guardar(new FileOutputStream(outFile)); // Serializa el CFD ya firmado
+    String cadena = cfd.getCadenaOriginal(); // Obtener cadena original
+    String sello = sellado.getSello(); // Obtener sello
 }}}
 
 El flujo típico para _verificar_ un CFDI versión 3.0, se ve así:
