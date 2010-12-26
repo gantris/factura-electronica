@@ -9,7 +9,7 @@ La librería presenta una interfaz muy simple centrada en el Comprobante Fiscal 
 
 == Breve introducción == 
 
-A continuación se presentan a manera de introducción, algunos ejemplos de como utilizar la librería. Más adelante se explican más a detalle los pasos necesarios para descargar e instalar la librería.
+A continuación se presentan a manera de introducción algunos ejemplos de como utilizar la librería. Más adelante se explican a detalle los pasos necesarios para descargar e instalar la librería.
 
 === Creación de un CFDv3 ===
 
