@@ -2,6 +2,12 @@
 
 CAMBIOS
 
+*0.1.5*
+  * Se corrigió y documentó el soporte para Google App Engine
+  * Se agregó soporte para cargar el `Comprobante` directamente de un archivo sin pasar por el CFD
+  * Se agregó la capacidad de obtener la cadena original y el sello a partir de un `Comprobante` sellado.
+  * Se cambiaron las hojas de transformación XSLT por las nuevas hojas del SAT para que los `CFDI` se puedan validar en la página del SAT.
+
 *0.1.4*
   * Se corrigió un [http://code.google.com/p/factura-electronica/issues/detail?id=14 error] al verificar el comprobante v2.0 utilizando el certificado interno.
   * Se generó una distribución binaria que incluye todas las dependencias y archivos binarios para ejecutar la línea de comandos.
