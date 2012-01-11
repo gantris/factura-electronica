@@ -1,0 +1,13 @@
+mx.bigdata.cfd
+mx.bigdata.cfdi
+mx.bigdata.sat.cfd
+mx.bigdata.sat.cfd.examples
+mx.bigdata.sat.cfd.schema
+mx.bigdata.sat.cfd.tools
+mx.bigdata.sat.cfdi
+mx.bigdata.sat.cfdi.examples
+mx.bigdata.sat.cfdi.schema
+mx.bigdata.sat.cfdi.tools
+mx.bigdata.sat.common
+mx.bigdata.sat.schema.binder
+mx.bigdata.sat.security
