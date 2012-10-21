@@ -3,7 +3,7 @@
 
 * 21/10/2012 -- Nos mudamos a `GitHub`, queremos formar una mejor comunidad donde todos puedan participar. Visítanos!* 
 
-* https://github.com/bigdata-mx/factura-electronica/wiki/Guia-del-usuario *
+* Nueva guía del usuario: https://github.com/bigdata-mx/factura-electronica/wiki/Guia-del-usuario *
 
 = Librería de componentes =
 
