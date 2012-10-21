@@ -1,6 +1,8 @@
 #summary Guía del Usuario
 #labels Featured
 
+* 21/10/2012 -- Nos mudamos a `GitHub`, queremos formar una mejor comunidad donde todos puedan participar. Visítanos https://github.com/bigdata-mx/factura-electronica *
+
 *`***`nota: la librería se encuentra actualmente en desarrollo y su interfaz puede cambiar hasta alcanzar la versión 0.2`***`*
 
 = Librería de componentes =
@@ -256,10 +258,3 @@ este comando preparará todas las dependencias y generará el código necesario 
 Para ejecutar el programa de ejemplo, utiliza el comando:
 
 {{{mvn exec:java}}}
-
-= Dudas y comentarios =
-
-¿Tienes algún problema o sugerencia de mejora?  
-
-Busca la respuesta en la sección de [PreguntasFrecuentes preguntas frecuentes] o en la sección de [http://code.google.com/p/factura-electronica/issues/list seguimiento]. Si no encuentras la respuesta, crea una nueva entrada utilizando la liga de _New Issue_ y haremos todo lo posible por solucionarlo.
- 
