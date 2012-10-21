@@ -1,7 +1,7 @@
 #summary Preguntas Frecuentes
 #labels Featured
 
-* 21/10/2012 -- Nos mudamos a GitHub, queremos formar una mejor comunidad donde todos puedan participar. Visítanos https://github.com/bigdata-mx/factura-electronica *
+* 21/10/2012 -- Nos mudamos a `GitHub`, queremos formar una mejor comunidad donde todos puedan participar. Visítanos https://github.com/bigdata-mx/factura-electronica *
 
 1.  *¿Puedo utilizar los componentes en aplicaciones comerciales?*
 
